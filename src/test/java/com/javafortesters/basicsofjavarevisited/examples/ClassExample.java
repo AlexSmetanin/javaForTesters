@@ -9,7 +9,7 @@ public class ClassExample {
     private String privField = "a private field";
     private String name;
 
-    public ClassExpample(String name){
+    public ClassExample(String name){
         this.name = name;
     }
 

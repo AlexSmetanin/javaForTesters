@@ -16,7 +16,8 @@ public class User {
 
     public User(String username, String password){      // конструктор с агрументами
         this.username = username;                       // this. обращается к полю текущего объекта
-        this.password = password;
+        //this.password = password;
+        setPassword(password);
     }
 
     public String getUsername() {                       // getter - получает значение переменной или поля
@@ -28,6 +29,13 @@ public class User {
     }
 
     public void setPassword(String password) {
+        if(password.length()<7){
+            throw new IllegalArgumentException("Password must be > 6 chars");
+        }
         this.password = password;
+    }
+
+    public String getPermission(){
+        return "Normal";
     }
 }
